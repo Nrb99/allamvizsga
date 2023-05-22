@@ -49,7 +49,7 @@ Route::middleware(['auth'])->group(function(){
     Route::post('/addemployeeservice',[EmployeeController::class,'addService']);
     Route::delete('/deleteemployeeservice',[EmployeeController::class,'deleteService']);
     Route::get('/myreservations',[ReservationController::class,'myReservations']);
-    Route::get('/myemployeereservations/{id}',[ReservationController::class,'myEmployeeReservations']);
+    Route::get('/employeereservations/{id}',[ReservationController::class,'myEmployeeReservations']);
 
 });
 Route::get('/', [SalonController::class,'index'] )->name('show');
