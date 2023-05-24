@@ -28,11 +28,12 @@
 </nav>
 
     <main>
-        @if (Session::has('message'))
-            <p>{{ Session::get('message') }}</p>
-        @endif
+
         <div class="container">
             <article>
+                @if (Session::has('message'))
+            <p>{{ Session::get('message') }}</p>
+        @endif
                 <hgroup>
                     <h1>Login</h1>
                     <p>Log in to your account</p>
@@ -60,7 +61,10 @@
 
     </main>
     <footer>
-        <p>szia</p>
+
+        <h1>ReserveIT</h1>
+        <p>Kiraly Norbert</p>
+
     </footer>
 
 </body>

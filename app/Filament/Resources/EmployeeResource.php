@@ -14,6 +14,7 @@ use App\Filament\Resources\EmployeeResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\EmployeeResource\RelationManagers;
 use App\Filament\Resources\EmployeeResource\RelationManagers\ReservationsRelationManager;
+use Filament\Forms\Components\Select;
 
 class EmployeeResource extends Resource
 {
@@ -25,10 +26,10 @@ class EmployeeResource extends Resource
     {
         return $form
             ->schema([
+                Select::make('salon_id')->relationship('salon','name'),
                 Forms\Components\TextInput::make('name')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('description'),
+                    ->required(),
+                Forms\Components\TextInput::make('description')->maxLength(255)->required(),
                 TimePicker::make('starts_at')->required(),
                 TimePicker::make('ends_at')->required(),
 
@@ -59,7 +60,7 @@ class EmployeeResource extends Resource
     public static function getRelations(): array
     {
         return [
-            ReservationsRelationManager::class
+            ReservationsRelationManager::class,
         ];
     }
 

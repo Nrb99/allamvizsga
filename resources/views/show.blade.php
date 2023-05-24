@@ -78,6 +78,12 @@
 
         @endforeach
     </div>
+    <footer>
+
+        <h1>ReserveIT</h1>
+        <p>Kiraly Norbert</p>
+
+    </footer>
 
 
 

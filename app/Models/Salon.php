@@ -26,7 +26,7 @@ class Salon extends Model
     public function services(){
         return $this->belongsToMany(Service::class,'salon_services');
     }
-    public function owner(){
+    public function user(){
         return $this->belongsTo(User::class);
     }
     public function pictures()

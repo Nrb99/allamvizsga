@@ -21,6 +21,7 @@
         </ul>
 
     </nav>
+    <main>
     <div class="container">
         <article>
             @if ($errors->any())
@@ -31,7 +32,7 @@
             @endif
             <hgroup>
                 <h1>Create your salon</h1>
-                <p>siu</p>
+                <p>Fill the form fields to create a salon</p>
             </hgroup>
             <form action="/create" method="POST" enctype="multipart/form-data">
                 @csrf
@@ -50,6 +51,13 @@
             </form>
         </article>
     </div>
+</main>
+<footer class="container-fluid">
+
+    <h1>ReserveIT</h1>
+    <p>Kiraly Norbert</p>
+
+</footer>
 </body>
 
 </html>

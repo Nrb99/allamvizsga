@@ -35,6 +35,7 @@ class ServiceResource extends Resource
                 Tables\Columns\TextColumn::make('id'),
                 Tables\Columns\TextColumn::make('name'),
 
+
             ])
             ->filters([
                 //

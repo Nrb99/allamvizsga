@@ -21,7 +21,7 @@ class UserController extends Controller
     public function store(StoreUserRequest $request)
     {
         User::create($request->validated());
-        return redirect('login');
+        return redirect('login')->with('message','You have been registered. Now you can log in');
     }
     public function login()
     {

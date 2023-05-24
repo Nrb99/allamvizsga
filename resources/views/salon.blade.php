@@ -71,6 +71,12 @@
 
 
     </main>
+    <footer>
+
+        <h1>ReserveIT</h1>
+        <p>Kiraly Norbert</p>
+
+    </footer>
 
     {{-- <a href="/reservation/{{ $salon->id }}">Foglalas</a> --}}
 

@@ -21,7 +21,9 @@ class ReservationController extends Controller
      */
     public function index()
     {
-
+        if(Auth::user()->is_admin){
+            return Reservation::all();
+        }
     }
     public function myReservations()
     {

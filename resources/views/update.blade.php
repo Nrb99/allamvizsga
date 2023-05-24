@@ -36,6 +36,12 @@
             </form>
         </article>
     </div>
+    <footer class="container-fluid">
+
+        <h1>ReserveIT</h1>
+        <p>Kiraly Norbert</p>
+
+    </footer>
 </body>
 
 </html>

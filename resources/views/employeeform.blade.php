@@ -10,6 +10,27 @@
 </head>
 <body>
     <main class="container">
+        <nav class="container-fluid">
+            <ul>
+                <li><img src="" alt=""></li>
+                <li><a href="/" class="contrast">ReserveIT</a></li>
+            </ul>
+            @auth
+                <ul>
+                    @if (empty(auth()->user()->salon))
+                       <li> <a href="/create">New Salon</a></li>
+                    @else
+                        <li><a href="/mysalon">My Salon</a></li>
+                    @endif
+                    <li><a href="/logout">Log out</a></li>
+                </ul>
+            @else
+                <ul class="contrast">
+                    <li><a href="/registration">Create user</a></li>
+                    <li><a href='/login'>Login</a></li>
+                </ul>
+            @endauth
+            </nav>
     <article>
     @if (Session::has('message'))
         <p>{{ Session::get('message')}}</p>
@@ -38,6 +59,13 @@
     </form>
 
 </article>
+
 </main>
+<footer class="container-fluid">
+
+    <h1>ReserveIT</h1>
+    <p>Kiraly Norbert</p>
+
+</footer>
 </body>
 </html>

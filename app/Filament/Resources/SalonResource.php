@@ -7,6 +7,7 @@ use App\Filament\Resources\SalonResource\RelationManagers;
 use App\Filament\Resources\SalonResource\RelationManagers\EmployeesRelationManager;
 use App\Models\Salon;
 use Filament\Forms;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Resources\Form;
 use Filament\Resources\RelationManagers\RelationManager;
@@ -27,9 +28,12 @@ class SalonResource extends Resource
     {
         return $form
             ->schema([
+                Select::make('user_id')->relationship('user','email'),
                 Forms\Components\TextInput::make('name')->required(),
                 // Forms\Components\TextInput::make('description'),
-                Textarea::make('description')
+                Forms\Components\TextInput::make('email')->email()->required(),
+                Forms\Components\TextInput::make('phone_number')->required(),
+                Textarea::make('description'),
 
 
             ]);
@@ -39,6 +43,7 @@ class SalonResource extends Resource
     {
         return $table
             ->columns([
+
                 Tables\Columns\TextColumn::make('id')->sortable(),
                 Tables\Columns\TextColumn::make('name')->sortable(),
                 Tables\Columns\TextColumn::make('description')->size(10),

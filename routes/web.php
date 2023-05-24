@@ -51,6 +51,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/myreservations',[ReservationController::class,'myReservations']);
     Route::get('/employeereservations/{id}',[ReservationController::class,'myEmployeeReservations']);
 
+
 });
 Route::get('/', [SalonController::class,'index'] )->name('show');
 Route::get('login', [UserController::class,'login'] )->name('login');

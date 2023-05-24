@@ -74,7 +74,10 @@
         </article>
     </div>
     <footer>
-        <p>Sziamiau</p>
+
+        <h1>ReserveIT</h1>
+        <p>Kiraly Norbert</p>
+
     </footer>
 
 </body>

@@ -30,8 +30,10 @@ class ReservationsRelationManager extends RelationManager
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('salon_id'),
                 Tables\Columns\TextColumn::make('id'),
+                Tables\Columns\TextColumn::make('reservation_time'),
+                Tables\Columns\TextColumn::make('estimated_end'),
             ])
             ->filters([
                 //

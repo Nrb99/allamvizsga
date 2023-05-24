@@ -21,8 +21,13 @@ class SalonsRelationManager extends RelationManager
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
+                    ->required(),
+
+                Forms\Components\TextInput::make('description')
                     ->required()
                     ->maxLength(255),
+                Forms\Components\TextInput::make('email')->required(),
+                Forms\Components\TextInput::make('phone_number')->numeric()->required()
             ]);
     }
 

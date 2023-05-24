@@ -33,11 +33,13 @@
     <form action="/addemployeeservice" method="POST">
         @csrf
         <input type="hidden" name="employee_id" value="{{ $employee->id }}">
+        <label for="id">Service</label>
         <select name="id" id="">
             @foreach ($services as $service )
                 <option  value="{{ $service->id }}">{{ $service->name }}</option>
             @endforeach
         </select>
+        <label for="number">Service duration</label>
         <input type="number" name="duration">
         <button>Add Service</button>
     </form>
